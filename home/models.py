@@ -58,3 +58,10 @@ class DataModel(models.Model):
     cc = models.ManyToManyField(
         "home.CustomText", blank=True, related_name="datamodel_cc",
     )
+    ferfc = models.ForeignKey(
+        "users.User",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="datamodel_ferfc",
+    )
